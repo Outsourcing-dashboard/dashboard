@@ -237,10 +237,11 @@ def register_callbacks(app):
                                             html.P(
                                                 "Joachim is a software engineer and economist with expertise in building apps and website."
                                             ),
-                                            html.A(
-                                                 "Follow Joachim on Github to be in with a chance of winning a novelty-themed stuffed toy.",
-                                                 href="https://github.com/Kochlyfe",
-                                            )       
+                                            html.P(
+                                                "Follow",
+                                                html.A("Joachim on Github", href="https://github.com/Kochlyfe"),
+                                                "to be in with a chance of winning a novelty-themed stuffed toy."
+                                                ),       
                                         ],
                                         style={
                                             "display": "inline-block",
