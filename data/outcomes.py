@@ -297,5 +297,6 @@ Placements = placements_df
 Outcomes.to_csv(csv_path("outcomes"), index=False, header=True, encoding="utf-8")
 Expenditure.to_csv(csv_path("expenditures"), index=False, header=True, encoding="utf-8")
 Placements.to_csv(csv_path("placements"), index=False, header=True, encoding="utf-8")
-la_df.to_csv(csv_path("la"), index=False, header=True, encoding="utf-8")
+la_df.to_csv("la.csv", index=False, header=True, encoding="utf-8")
+#la_df.to_csv("C:/Users/benjamin.goodair/OneDrive - Nexus365/Documents/GitHub/dashboard/data/processed/la.csv", index=False, header=True, encoding="utf-8")
 merged2.to_file(geojson_path("merged"), driver="GeoJSON")
