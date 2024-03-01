@@ -40,6 +40,8 @@ def register_callbacks(app, dataframes: DataContainer):
         if tab == "tab-9":
             return html.Div(
                 [
+                    html.H1('Compare data for different areas'),
+                    html.H3('Click or type for multiple Local Authorities'),
                     dcc.Dropdown(
                         id="la-dropdown6",
                         options=[
@@ -173,8 +175,10 @@ def register_callbacks(app, dataframes: DataContainer):
             ]
         else:
             return {"data": []}
+    
+        filtered_df = filtered_df.rename(columns={'LA_Name': 'Local Authority', 'year': 'Year', 'percent': 'Percent (%)'})
 
-        fig = px.scatter(filtered_df, x="year", y="percent", color="LA_Name")
+        fig = px.scatter(filtered_df, x="Year", y="Percent (%)", color="Local Authority")
         fig.update_layout(
             xaxis_title="Year",
             yaxis_title=selected_variable,
@@ -183,10 +187,10 @@ def register_callbacks(app, dataframes: DataContainer):
 
         # Add a line trace to the plot
         for la in selected_local_authorities:
-            line_data = filtered_df[filtered_df["LA_Name"] == la].sort_values(by="year")
+            line_data = filtered_df[filtered_df["Local Authority"] == la].sort_values(by="Year")
             fig.add_trace(
                 go.Scatter(
-                    x=line_data["year"], y=line_data["percent"], mode="lines", name=la
+                    x=line_data["Year"], y=line_data["Percent (%)"], mode="lines", name=la
                 )
             )
 
