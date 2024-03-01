@@ -203,11 +203,18 @@ def register_callbacks(app, dataframes: DataContainer):
         if selected_county is not None:
             filtered_df = filtered_df[la_df["LA_Name"] == selected_county]
 
+        filtered_df = filtered_df.rename(
+            columns={'LA_Name': 'Local Authority',
+                     'year': 'Year',
+                     'percent': 'For-profit placements (%)'}
+                      )
+
+
         fig1 = px.scatter(
             filtered_df,
-            x="year",
-            y="percent",
-            color="percent",
+            x="Year",
+            y="For-profit placements (%)",
+            color="For-profit placements (%)",
             trendline="lowess",
             color_continuous_scale="ylorrd",
         )
@@ -235,12 +242,17 @@ def register_callbacks(app, dataframes: DataContainer):
 
         if selected_county is not None:
             filtered_df_spend = filtered_df_spend[la_df["LA_Name"] == selected_county]
+    
+        filtered_df_spend = filtered_df_spend.rename(
+            columns={'LA_Name': 'Local Authority', 
+                     'year': 'Year', 'percent': 'For-profit spend (%)'}
+                     )
 
         fig2 = px.scatter(
             filtered_df_spend,
-            x="year",
-            y="percent",
-            color="percent",
+            x="Year",
+            y="For-profit spend (%)",
+            color="For-profit spend (%)",
             trendline="lowess",
             color_continuous_scale="ylorrd",
         )
@@ -358,7 +370,7 @@ def register_callbacks(app, dataframes: DataContainer):
         fig.update_layout(
             xaxis_title="Year",
             yaxis_title="Number",
-            title="Childrens home entries or exits",
+            title=f'Childrens home {selected_exits_entries}',
         )
 
         return fig

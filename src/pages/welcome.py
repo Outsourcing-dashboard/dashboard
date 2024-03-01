@@ -6,7 +6,7 @@ def render_page():
     return html.Div(
         [
             html.H2(
-                "Welcome to the Outsourcing Impacts Tracker Dashboard",
+                "The Outsourcing Impacts Tracker Dashboard for Children's Social Care",
                 className="display-7",
             ),
             html.Hr(),
@@ -20,6 +20,9 @@ def render_page():
             ),
             html.P(
                 "We encourage policymakers to utilize this dashboard as a resource for evidence-based decision-making. By considering the data, visualizations, and resources provided here, policymakers can better understand the magnitude of outsouring and the potential risks associated with it. Additionally, we recommend referring to the 'Links to Resources' section for further in-depth research and reports."
+            ),
+            html.P(
+                "For now, the dashboard is best viewed on a full computer screen rather than mobile device"
             ),
             html.Hr(),
             html.H4("Important Note"),

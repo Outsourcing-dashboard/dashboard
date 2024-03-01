@@ -34,19 +34,21 @@ l.register_callbacks(app)
 
 server = app.server
 
-tabs_styles = {"height": "44px"}
+tabs_styles = {
+    'height': '44px'
+}
 tab_style = {
-    "borderBottom": "1px solid #d6d6d6",
-    "padding": "6px",
-    "fontWeight": "bold",
+    'borderBottom': '1px solid #d6d6d6',
+    'padding': '6px',
+    'fontWeight': 'bold'
 }
 
 tab_selected_style = {
-    "borderTop": "1px solid #d6d6d6",
-    "borderBottom": "1px solid #d6d6d6",
-    "backgroundColor": "#119DFF",
-    "color": "white",
-    "padding": "6px",
+    'borderTop': '1px solid #d6d6d6',
+    'borderBottom': '1px solid #d6d6d6',
+    'backgroundColor': '#119DFF',
+    'color': 'white',
+    'padding': '6px'
 }
 
 SIDEBAR_STYLE = {
@@ -60,6 +62,7 @@ SIDEBAR_STYLE = {
     "transform": "scale(0.67)",  # Adjust the scale factor as needed
     "transform-origin": "top left",
     "height": "150%",  # Approximately compensating for 33% scale-down
+
 }
 
 # the styles for the main content position it to the right of the sidebar and
@@ -79,8 +82,7 @@ sidebar = html.Div(
         html.H2("Outsourcing Impacts Tracker", className="display-7"),
         html.Hr(),
         html.P(
-            "Welcome to a dashboard detailing the impacts of outsourcing in England's children social care sector.",
-            className="lead",
+            "Welcome to a dashboard detailing the impacts of outsourcing in England's children social care sector.", className="lead"
         ),
         dbc.Nav(
             [
@@ -105,12 +107,12 @@ watermark = html.Div(
     style={
         "position": "fixed",
         "bottom": "50%",  # Adjust the vertical position
-        "right": "50%",  # Adjust the horizontal position
+        "right": "50%",   # Adjust the horizontal position
         "transform": "translate(50%, 50%) rotate(-45deg)",  # Rotate and position
         "color": "rgba(255, 0, 0, 0.4)",
         "fontSize": "70px",  # Increase the font size for better visibility
         "zIndex": "9999",
-    },
+    }
 )
 
 
