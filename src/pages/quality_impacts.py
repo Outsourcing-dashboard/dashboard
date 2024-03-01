@@ -176,13 +176,19 @@ def register_callbacks(app, dataframes: DataContainer):
                 & (outcomes_df["variable"] == selected_variable)
             ].copy()
 
+        filtered_df_outcome = filtered_df_outcome.rename(
+            columns={'LA_Name': 'Local Authority', 
+                     'year': 'Year', 
+                     'percent': 'Percent (%)'})
+
         outcome_plot = px.scatter(
             filtered_df_outcome,
-            x="year",
-            y="percent",
-            color="percent",
+            x="Year",
+            y="Percent (%)",
+            color="Percent (%)",
             trendline="lowess",
             color_continuous_scale="ylorrd",
+            hover_data=['Local Authority', 'Year', 'Percent (%)']
         )
         outcome_plot.update_traces(marker=dict(size=5))
         outcome_plot.update_layout(
@@ -347,14 +353,20 @@ def register_callbacks(app, dataframes: DataContainer):
                 & (placements_df["LA_Name"] == selected_county)
                 & (placements_df["variable"] == selected_variable)
             ].copy()
+        
+        filtered_df_placement = filtered_df_placement.rename(
+            columns={'LA_Name': 'Local Authority', 
+                     'year': 'Year', 
+                     'percent': 'Percent (%)'})
 
         placement_plot = px.scatter(
             filtered_df_placement,
-            x="year",
-            y="percent",
-            color="percent",
+            x="Year",
+            y="Percent (%)",
+            color="Percent (%)",
             trendline="lowess",
             color_continuous_scale="ylorrd",
+            hover_data=['Local Authority', 'Year', 'Percent (%)']
         )
         placement_plot.update_traces(marker=dict(size=5))
         placement_plot.update_layout(
