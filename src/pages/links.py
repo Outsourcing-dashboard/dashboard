@@ -163,10 +163,14 @@ def register_callbacks(app):
                     html.H6("Research on outsourcing of healthcare"),
                     html.Li(
                         html.A(
-                            "What is the impact of outsourcing healthcare services on quality of care?",
+                            "What is the impact of outsourcing healthcare services on quality of care in England?",
                             href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(22)00133-5/fulltext?trk=organization_guest_main-feed-card_feed-article-content",
                         )
                     ),
+                    html.Li(
+                        html.A(
+                            "What is the international evidence on impact of outsourcing healthcare services?", 
+                            href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(24)00003-3/fulltext")),
                     html.Li(
                         html.A(
                             "Why do NHS commissioners outsource healthcare services?",
@@ -213,6 +217,30 @@ def register_callbacks(app):
                                             html.P(
                                                 "Anders was national champion fencer in his youth - he now uses skills of precision in interpretting complex statistical models."
                                             ),
+                                        ],
+                                        style={
+                                            "display": "inline-block",
+                                            "vertical-align": "top",
+                                        },
+                                    ),
+                                ]
+                            ),
+                            html.Li(
+                                [
+                                    html.Img(
+                                        src="https://github.com/Outsourcing-dashboard/dashboard/blob/main/Images/Joachim.jpg?raw=true",
+                                        style={"width": "100px", "height": "100px"},
+                                    ),
+                                    html.Div(
+                                        [
+                                            html.H4("Joachim"),
+                                            html.P(
+                                                "Joachim is a software engineer and economist with expertise in building apps and website."
+                                            ),
+                                            html.A(
+                                                 "Follow Joachim on Github to be in with a chance of winning a novelty-themed stuffed toy.",
+                                                 href="https://github.com/Kochlyfe",
+                                            )       
                                         ],
                                         style={
                                             "display": "inline-block",
