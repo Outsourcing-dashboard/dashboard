@@ -235,7 +235,7 @@ def register_callbacks(app):
                                         [
                                             html.H4("Joachim"),
                                             html.P(
-                                                "Joachim is a software engineer and economist with expertise in building apps and websites. "
+                                                "Joachim is a software engineer and economist with wide-ranging experience in building apps and websites. "
                                             ),
                                             html.P(
                                                 [
