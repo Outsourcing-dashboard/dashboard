@@ -205,6 +205,29 @@ def register_callbacks(app):
                             html.Li(
                                 [
                                     html.Img(
+                                        src="https://github.com/BenGoodair/Methane_Dashboard/blob/main/ben.jpg?raw=true",
+                                        style={"width": "100px", "height": "100px"},
+                                    ),
+                                    html.Div(
+                                        [
+                                            html.H4("Ben"),
+                                            html.P(
+                                                "Ben is a social researcher identifying the impacts of privatization on health and social care systems."
+                                            ),
+                                            html.P(
+                                                "Ben will embroider any form of data visualisation he thinks worthy of the thread."
+                                            ),
+                                        ],
+                                        style={
+                                            "display": "inline-block",
+                                            "vertical-align": "top",
+                                        },
+                                    ),
+                                ]
+                            ),
+                            html.Li(
+                                [
+                                    html.Img(
                                         src="https://github.com/BenGoodair/Outsourcing_Impact_Dashboard/blob/main/Images/anders_bach-mortensen.jpg?raw=true",
                                         style={"width": "100px", "height": "100px"},
                                     ),
@@ -289,29 +312,6 @@ def register_callbacks(app):
                                             ),
                                             html.P(
                                                 "Christine once told Emma Watson that her shoelaces were undone."
-                                            ),
-                                        ],
-                                        style={
-                                            "display": "inline-block",
-                                            "vertical-align": "top",
-                                        },
-                                    ),
-                                ]
-                            ),
-                            html.Li(
-                                [
-                                    html.Img(
-                                        src="https://github.com/BenGoodair/Methane_Dashboard/blob/main/ben.jpg?raw=true",
-                                        style={"width": "100px", "height": "100px"},
-                                    ),
-                                    html.Div(
-                                        [
-                                            html.H4("Ben"),
-                                            html.P(
-                                                "Ben is a social researcher identifying the impacts of privatization on health and social care systems."
-                                            ),
-                                            html.P(
-                                                "Ben will embroider any form of data visualisation he thinks worthy of the thread."
                                             ),
                                         ],
                                         style={
