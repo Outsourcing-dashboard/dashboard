@@ -256,6 +256,7 @@ def register_callbacks(app, dataframes: DataContainer):
             color="For-profit spend (%)",
             trendline="lowess",
             color_continuous_scale="ylorrd",
+            hover_data=['Local Authority', 'Year', 'For-profit spend (%)']
         )
         fig2.update_traces(marker=dict(size=5))
         fig2.update_layout(
@@ -263,7 +264,6 @@ def register_callbacks(app, dataframes: DataContainer):
             yaxis_title="For-profit expenditure (%)",
             title="Percent of expenditure on for-profit providers 2011-22",
             coloraxis_colorbar=dict(title="For-profit %"),
-            hover_data=['Local Authority', 'Year', 'For-profit spend (%)']
         )
 
         return fig2
