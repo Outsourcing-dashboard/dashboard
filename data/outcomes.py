@@ -8,7 +8,22 @@ la_df = pd.read_csv(
     "https://raw.githubusercontent.com/BenGoodair/childrens_social_care_data/main/Final_Data/outputs/dashboard_data.csv"
 )
 la_df["percent"] = pd.to_numeric(la_df["percent"], errors="coerce")
+
+
+la_df = la_df[(la_df['variable']!="Fostering services (excluding fees and allowances for LA foster carers)")&
+                  (la_df['variable']!="Education of looked after children")&
+                  (la_df['variable']!="Special guardianship support")&
+                  (la_df['variable']!="Fostering services (fees and allowances for LA foster carers)")&
+                  (la_df['variable']!="Short breaks (respite) for looked after disabled children")&
+                  (la_df['variable']!="Children placed with family and friends")]
+
+
+
+la_df = la_df.sort_values(by=['variable'])
+
 la_df.sort_values(by="LA_Name", ascending=True, inplace=True)
+
+
 
 df2022 = la_df[la_df["year"] == 2022]
 
